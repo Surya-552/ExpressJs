@@ -62,9 +62,7 @@
 const convertTime = inputTime => {
    const [time, modifier] = inputTime.split(' ');
    let [hours, minutes, seconds] = time.split(':');
-    modifier=(modifier==='am'||modifier==='AM')?'AM':'NA';
-    modifier=(modifier==='pm'||modifier==='pm')?'PM':'NA'; 
-if(hours<=12 &&(modifier==='AM'||modifier==='PM')){
+   if(hours<=12 &&((modifier==='AM'||modifier==='am')||(modifier==='PM'||modifier==='pm'))){
     seconds=parseInt(seconds, 10) +45;
     minutes=parseInt(minutes,10)+45;
     hours = parseInt(hours, 10);
