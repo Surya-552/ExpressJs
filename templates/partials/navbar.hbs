@@ -1,0 +1,104 @@
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+    />
+
+<header id="default_header" class="header_style_1">
+        <!-- end header top -->
+        <!-- header bottom -->
+        <div class="header_bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <!-- logo start -->
+                <div class="logo" > <a href="it_home.html" target="content"><img  src="images/logos/Presentation1.png"  alt="logo" /></a> </div>
+                <!-- logo end -->
+              </div>
+              
+              <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" id="middle">
+                <!-- menu start -->
+                <div class="menu_side">
+                  <div id="navbar_menu">
+                    <ul class="first-ul">
+                      <li> <a href="home.html" target="content">Home</a>
+                      </li>
+                      <li><a class="active" href="#" target="content">About Us</a></li>
+                      <li> <a >Courses</a>
+                        <ul>
+                          <li><a href="#" target="content">UPSC</a></li>
+                          <li><a href="#" target="content">SSC</a></li>
+                          <li><a href="#" target="content">CHSL</a></li>
+                        </ul>
+                      </li>
+                      <li> <a>STUDY MATERIAL</a>
+                        <ul>
+                          <li><a href="#" target="content">REASONING</a></li>
+                          <li><a href="#" target="content" >QUANTITATIVE MATHS</a></li>
+                          <li><a href="#" target="content">CURRENT AFFAIRS</a></li>
+                        </ul>
+                      </li>
+                      <li> <a href="#" target="content">TEST SERIES</a>
+                        <ul>
+                          <li><a href="#" target="content">REASONING</a></li>
+                          <li><a href="#" target="content">QUANTITATIVE MATHS</a></li>
+                          <li><a href="#" target="content">CURRENT AFFAIRS</a></li>
+                         
+                        </ul>
+                      </li>
+                    
+                      <li> <a href="#" target="content">Contact</a> 
+                      </li>
+           
+                    </ul>
+                  </div>
+                  
+                </div>
+            {{!-- <-- menu end -->   --}}
+              </div>
+            </div>
+          </div>
+          <div class="userprofile">
+            <div class="action1">
+                <div class="profile" onclick="menuToggle();">
+                  <img src="./assets/avatar.jpg" />
+                </div>
+                <div class="menu1">
+                  <h3>Someone Famous<br /><span>Website Designer</span></h3>
+                  <ul>
+                    <li>
+                      <img src="./assets/icons/user.png" /><a href="#">My profile</a>
+                    </li>
+                    <li>
+                      <img src="./assets/icons/edit.png" /><a href="#">Edit profile</a>
+                    </li>
+                    
+                    <li>
+                      <img src="./assets/icons/log-out.png" /><a href="#">Logout</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+             <a href="./Account" target="content" id="dropdown1" class="dropbtn1">fhfgh</a>
+              </div>
+        </div>
+        <!-- header bottom end -->
+        
+        </header>
+        <script>
+           
+const imgUrl = "images/logos/Presentation1.png";
+
+function logout() {
+    localStorage.clear();
+    location.href = "/signin";
+    location.reload();
+}
+
+function menuToggle() {
+  const toggleMenu = document.querySelector(".menu1");
+  toggleMenu.classList.toggle("active");
+}
+
+        </script>

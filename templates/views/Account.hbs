@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleLogin.css">
+</head>
+<body>
+      <div id="h_Eader">
+    {{!-- {{>navbar}} --}}
+  </div>
+    <div class="container">
+        <div class="left">
+           <img src="images/loginformimg.png" alt="" > 
+        </div>
+        <div class="right">
+            <div class="formbtn ">
+
+                <span onclick="Log()">
+                    Login
+                    
+                </span>
+                <span onclick="Register()">
+                    Register
+                </span>
+                <hr id="indicator">
+                <h4 id="showError"></h4>
+            </div>
+            <form action="/Login"id="Loginform" method="POST">
+                <input type="email" placeholder="userId" name="username" required >
+                <input type="password" placeholder="password" name="password" required>
+                <button type="submit" class="btn">Login</button>
+                <br>
+                <a href="">Forget password</a>
+                
+            </form>
+            <form action="/Account"id="Registerform" method="POST">
+                <input type="text" placeholder="username" name="name" required>
+                <input type="email" placeholder="email_id" name="username" required >
+                <input type="mobile" placeholder="MobileNo" name="mobile" required>
+                <input type="password" placeholder="password" name="password" required>
+                <button type="submit" class="btn">Register</button>
+            </form>
+
+        </div>
+    </div>
+    <script>
+        var Loginform=document.getElementById("Loginform");
+        var Registerform=document.getElementById("Registerform");
+        var indicator=document.getElementById("indicator");
+        function Register(){
+            Registerform.style.transform="translateX(0px)";
+            Loginform.style.transform="translateX(0px)";
+            indicator.style.transform="translateX(150px)";
+        }
+        function Log(){
+            Registerform.style.transform="translateX(300px)";
+            Loginform.style.transform="translateX(300px)";
+            indicator.style.transform="translateX(0px)";
+        }
+
+    </script>
+    <script src="js/nav1.js"></script> 
+    <script src="js/login.js"></script>
+</body>
+</html>

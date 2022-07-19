@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleLogin.css">
+   <style>
+    #container1{
+        display: flex;  
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        margin: 50px;
+    }
+    #box11 ,#box21 {
+        border: 2px solid black;
+        height: 360px;
+        width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+       justify-content: space-evenly;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        position: inherit;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: -20px;
+    }
+ 
+   </style>
+</head>
+<body>
+       <div id="h_Eader">
+    {{!-- {{>navbar}} --}}
+  </div>
+<div class="container1" id="container1">
+    <div id="box11">
+        <h3>Time Convert</h3>
+            
+            <label for="Time">Enter Time (hh:mm:ss AM/PM)</label>
+            <input type="text" id="TimeInput" >
+            <label for="Output">Output military time(24hr) after adding mm+45,ss+45</label>
+             <input type="text" id="Output" readonly>
+            <button  id="Sbtn" onclick="result()" style="width: 70px;padding:4px;">Submit</button>
+            <button  id="Rbtn" onclick="reset()" style="width: 70px;padding:4px;">Reset</button>
+       
+    </div>
+<div id="box21">
+    <h3>Birds Sitting </h3></div>
+</div>
+{{!-- <script src="js/Task.js"></script> --}}
+<script>
+ function result(){
+    var inputTime=document.getElementById("TimeInput").value;
+    
+const convertTime = inputTime => {
+   const [time, modifier] = inputTime.split(' ');
+   let [hours, minutes, seconds] = time.split(':');
+    modifier=(modifier==='am'||modifier==='AM')?'AM':'NA';
+    modifier=(modifier==='pm'||modifier==='pm')?'PM':'NA'; 
+if(hours<=12 &&(modifier==='AM'||modifier==='PM')){
+    seconds=parseInt(seconds, 10) +45;
+    minutes=parseInt(minutes,10)+45;
+    hours = parseInt(hours, 10);
+     if (hours == 12) {
+       hours = '00';
+    }
+  if(seconds==60){
+     seconds='00';
+     minutes++;
+  }
+  if(seconds>60){
+     minutes++;
+     seconds=seconds-60;
+  }
+   if(minutes==60){
+     minutes='00';
+     hours++;
+  }
+  if(minutes>60){
+     hours++;
+     minutes=minutes-60;
+  }
+ 
+    if (modifier === 'PM') {
+       hours = parseInt(hours, 10)+12;
+    }
+     seconds=(seconds<=9&&seconds>=1)?`0${seconds}`:seconds;
+  minutes=(minutes<=9&&minutes>=1)?`0${minutes}`:minutes;
+  hours=(hours<=9&&hours>=1)?`0${hours}`:hours;
+    return `${hours}:${minutes}:${seconds}`;
+}
+else
+return `"Invalid Input Time"`;
+};
+document.getElementById("Output").value=convertTime(inputTime);
+console.log(convertTime(inputTime));
+}
+function reset(){
+     document.getElementById("TimeInput").value='';
+     document.getElementById("Output").value='';
+}
+</script>
+<script src="js/nav1.js"></script>
+</body>
+</html>

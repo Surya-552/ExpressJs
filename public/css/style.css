@@ -1,0 +1,139 @@
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700,900);
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,700i);
+@import url(https://fonts.googleapis.com/css?family=Arvo:400,400i,700,700i);
+
+	.topbar-hightlight{
+		color: white;
+		text-decoration: none;
+	}
+
+.header_bottom{
+	border-bottom: 4px solid blue;
+	
+}
+.header_bottom:hover{
+	border-bottom: 4px solid hsl(196, 100%, 50%);
+}
+body{
+	background:-webkit-radial-gradient(#fff,#99ffff);
+ 
+	
+}
+.header_bottom{
+	display: flex;
+
+}
+.container{
+	display: flex;
+	align-items: center;
+	text-align: center;
+	height: 80vh;
+	flex-wrap: wrap;    
+	padding: 10px;
+	justify-content: space-around;
+}
+.right{
+	min-width:320px;
+	height: 400px;
+	background: white;
+	position: relative;
+	text-align: center;
+	padding: 20px 0px;
+	box-shadow: 0 0 20px 0 darkblue;
+	overflow: hidden;
+	
+}
+.left{
+	position: relative;
+	max-width:600px;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	float: left;
+}
+.left img{
+	max-height: 300px;
+	max-width: 600px;
+}
+@media screen and (max-width:700px) {
+	.left{
+	position: relative;
+	width:360px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+}
+.left img{
+	max-height: 300px;
+	width: 360px;
+	
+}
+
+}
+.formbtn{
+	display: inline-block;
+
+}
+.right span{
+	font-weight: bold;
+	padding: 0 10px;
+	color: #555;
+	cursor: pointer;
+	width: 100px;
+	display:inline-block;
+}
+form{
+	max-width: 300px;
+	padding:0 20px;
+	position:absolute;
+	top:130px;
+transition: transform 1s;
+}
+form input{
+	width: 80%;
+	height: 30px;
+	margin: 10px;
+	padding:0 10px;
+	border: 1px solid rgb(49, 106, 231);
+}
+form .btn{
+	width: 80%;
+	border:none;
+	cursor: pointer;
+	margin: 10px 0;
+	background-color: rgb(11, 123, 157);
+	border-radius: 4%;
+	height: 40px;
+	display: inline-block;
+	color: white;
+	padding: 8px;
+	font-size: 18px;
+	font-weight: bold;
+}
+#Loginform {
+	left: -300px;
+	width: 280px;
+}
+#Registrationform {
+	left: 0;
+	width: 280px;
+}
+form a{
+	font-size: 12px;
+}
+form .btn:focus{
+	outline: none;
+}
+#indicator{
+	width: 100px;
+	border: none;
+	background:  rgb(11, 123, 157);
+	height: 3px;
+	margin-top: 8px;
+	transform: translateX(150px);
+	transition: transform 1s;
+	margin-left: 0px;
+}
