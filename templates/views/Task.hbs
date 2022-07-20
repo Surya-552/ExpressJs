@@ -87,7 +87,7 @@ if(hours<=12 &&((modifier==='AM'||modifier==='am')||(modifier==='PM'||modifier==
      minutes=minutes-60;
   }
  
-    if (modifier === 'PM') {
+    if (modifier === 'PM'||modifier === 'pm') {
        hours = parseInt(hours, 10)+12;
     }
      seconds=(seconds<=9&&seconds>=1)?`0${seconds}`:seconds;
