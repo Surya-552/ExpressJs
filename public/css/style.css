@@ -24,7 +24,7 @@ body{
 }
 .header_bottom{
 	display: flex;
-
+flex-wrap:wrap;
 }
 .container{
 	display: flex;
